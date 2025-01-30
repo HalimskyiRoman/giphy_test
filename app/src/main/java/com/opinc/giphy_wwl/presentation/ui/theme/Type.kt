@@ -1,4 +1,4 @@
-package com.opinc.giphy_wwl.ui.theme
+package com.opinc.giphy_wwl.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

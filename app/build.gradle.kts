@@ -58,7 +58,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.glide)
+    implementation(libs.compose) // Glide for Jetpack Compose
 
-    implementation(libs.coil.compose)
-    implementation(libs.coil.network.okhttp)
+    implementation(libs.androidx.navigation.compose)
+
 }
