@@ -2,6 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -58,8 +62,26 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.glide)
-    implementation(libs.compose) // Glide for Jetpack Compose
+    implementation(libs.compose)
 
     implementation(libs.androidx.navigation.compose)
 
+    implementation (libs.jetbrains.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.androidx.hilt.navigation.fragment)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.hilt.android)
+    kapt(libs.androidx.hilt.compiler)
+    kapt(libs.hilt.compiler)
+
+}
+
+kapt {
+    correctErrorTypes = true
 }

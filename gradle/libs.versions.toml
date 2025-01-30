@@ -15,6 +15,14 @@ composeBom = "2024.04.01"
 navigationSafeArgsGradlePlugin = "2.7.2"
 navigationCompose = "2.7.7"
 kotlinGradlePlugin = "1.6.10"
+jetbrainsKotlinxCoroutinesCore = "1.5.2"
+kotlinxCoroutinesAndroid = "1.5.2"
+gson = "2.10.1"
+converterGson = "2.9.0"
+loggingInterceptor = "4.10.0"
+hiltNavigationFragment = "1.0.0"
+hiltAndroid = "2.47"
+
 
 
 [libraries]
@@ -39,6 +47,18 @@ androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:na
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 
+jetbrains-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "jetbrainsKotlinxCoroutinesCore" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterGson" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationFragment" }
+androidx-hilt-navigation-fragment = { module = "androidx.hilt:hilt-navigation-fragment", version.ref = "hiltNavigationFragment" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltNavigationFragment" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

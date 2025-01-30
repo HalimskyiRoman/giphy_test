@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
+import com.opinc.giphy_wwl.presentation.activity.MainActivityViewModel
 import com.opinc.giphy_wwl.presentation.screens.FullScreen
 import com.opinc.giphy_wwl.presentation.screens.MainScreen
 import java.net.URLDecoder
@@ -21,8 +22,7 @@ import java.nio.charset.StandardCharsets
 
 @RequiresApi(Build.VERSION_CODES.R)
 @Composable
-fun Navigation(
-) {
+fun Navigation(viewModel: MainActivityViewModel) {
 
     val navController = rememberNavController()
 
@@ -46,7 +46,9 @@ fun Navigation(
                 startDestination = Screen.MainScreen.route, route = "main"
             ) {
                 composable(route = Screen.MainScreen.route) { entry ->
-                    MainScreen { url ->
+                    MainScreen(
+                        viewModel = viewModel
+                    ) { url ->
                         val encodedUrl = URLEncoder.encode(url, StandardCharsets.UTF_8.toString())
                         navController.navigate("${Screen.FullScreen.route}/$encodedUrl")
                     }
